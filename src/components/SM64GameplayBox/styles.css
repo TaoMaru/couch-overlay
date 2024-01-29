@@ -1,0 +1,6 @@
+.sm64-gameplay-box {
+    width: 480px;
+    height: 360px;
+    border: 2px var(--aquamarine) solid;
+    border-radius: 4px;
+}
