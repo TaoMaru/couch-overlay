@@ -17,8 +17,8 @@
   background-image:  
   linear-gradient(45deg, var(--prussian-blue) 10%, var(--prussian-blue) 80%, var(--aquamarine) 80%, var(--aquamarine) 85%); 
   /* background-position: top; */
-  background-size: 2% 2%; 
-  background-repeat: repeat-y; 
+  background-size: 3% 2%; 
+  background-repeat: repeat; 
  
   /* background-image: linear-gradient(to bottom, var(--prussian-blue) 0 10%, var(--aquamarine) 0%); 
   background-position: left;
