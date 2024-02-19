@@ -10,12 +10,10 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/solo-sm64" element={<SoloSM64/>} />
+        <Route path="/couch-overlay/" element={<Home/>}/>
+        <Route path="/couch-overlay/solo-sm64" element={<SoloSM64/>} />
       </Routes>
-    </BrowserRouter>
     </>
   )
 }
