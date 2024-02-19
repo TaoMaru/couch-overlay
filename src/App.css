@@ -12,13 +12,14 @@
   background-color: var(--prussian-blue);
   padding: 10px 20px;
   gap: 20px;
+  position: relative;
+  overflow: hidden;
   /* border: 5px dashed var(--aquamarine);
   border-style: dotted; */
-  background-image:  
-  linear-gradient(45deg, var(--prussian-blue) 10%, var(--prussian-blue) 80%, var(--aquamarine) 80%, var(--aquamarine) 85%); 
+
+
   /* background-position: top; */
-  background-size: 3% 2%; 
-  background-repeat: repeat; 
+
  
   /* background-image: linear-gradient(to bottom, var(--prussian-blue) 0 10%, var(--aquamarine) 0%); 
   background-position: left;
@@ -26,10 +27,22 @@
   background-repeat: repeat-y;  */
 }
 
+.background-container {
+  width: 200%;
+  height: 200%;
+  background-image:  
+  linear-gradient(45deg, var(--prussian-blue) 10%, var(--prussian-blue) 80%, var(--aquamarine) 80%, var(--aquamarine) 85%); 
+  background-size: 3% 2%; 
+  background-repeat: repeat; 
+  position: absolute;
+  transform: rotateZ(45deg);
+}
+
 .sm64-gameplay-row {
   gap: 80px;
   width: 100%;
   height: 60%;
+  z-index: 2;
 }
 
 .overlay-bottom-row {
@@ -38,6 +51,7 @@
   background: linear-gradient(45deg, var(--chalk-violet), var(--aquamarine));
   background-repeat: no-repeat;
   animation: stripeSlide 4s infinite ease-in-out;
+  z-index: 2;
 }
 
 .center-center {
@@ -58,19 +72,29 @@
   height: 40%;
   border-radius: 24px;
   border: 6px var(--chalk-pink) solid;
-	background: linear-gradient(-45deg, var(--aquamarine) 0%, var(--aquamarine) 20%, var(--chalk-violet) 20%, 
+	/* background: linear-gradient(-45deg, var(--aquamarine) 0%, var(--aquamarine) 20%, var(--chalk-violet) 20%, 
                                   var(--chalk-violet) 30%, var(--aquamarine) 30%, var(--aquamarine) 40%,
                                   var(--chalk-violet) 40%, var(--chalk-violet) 50%, var(--aquamarine) 50%,
-                                  var(--aquamarine) 100%);
+                                  var(--aquamarine) 100%); /*big stripes*/
+
+ background: linear-gradient(-45deg, var(--aquamarine) 0%, var(--aquamarine) 50%, var(--chalk-violet) 50%, 
+                                  var(--chalk-violet) 60%, var(--aquamarine) 60%, var(--aquamarine) 70%,
+                                  var(--chalk-violet) 70%, var(--chalk-violet) 72%, var(--aquamarine) 72%,
+                                  var(--aquamarine) 74%, var(--chalk-violet) 74%, var(--chalk-violet) 76%,
+                                  var(--aquamarine) 76%, var(--aquamarine) 100%); /*small to big stripes*/
+  
 	background-size: 600% 600%;
-	animation: gradient 18s linear infinite reverse;
+	animation: gradient 18s linear infinite;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  z-index: 2;
 }
 
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
-	50% {
+	100% {
 		background-position: 100% 100%;
 	}
 	/* 100% {
@@ -91,10 +115,10 @@
   0% {
     background-position: 0% 50%;
   }
-  50% {
+  100% {
     background-position: 50% 0%;
   }
-  100% {
+  /* 100% {
     background-position: 0% 50%;
-  }
+  } */
 }
