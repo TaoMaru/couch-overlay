@@ -1,6 +1,8 @@
 import SM64GameplayBox from "../../components/SM64GameplayBox/SM64GameplayBox"
+import { useNavigate } from "react-router-dom"
 
 const Home = () => {
+  const nav = useNavigate()
     return (
         <>
           <div className="overlay-container column-center-center">
@@ -10,6 +12,9 @@ const Home = () => {
               <SM64GameplayBox />
             </div>
             <div className="center-center gradient-test"></div>
+            <div className="overlay-toggle-container">
+              <button className="overlay-toggle-btn" onClick={()=>nav('/couch-overlay/solo-sm64')}>Go Solo</button>
+            </div>
           </div>
         </>
       )

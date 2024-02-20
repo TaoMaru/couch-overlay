@@ -90,6 +90,31 @@
   z-index: 2;
 }
 
+.overlay-toggle-container {
+  background-color: var(--main-purple);
+  width: 80px;
+  height: 40px;
+  align-self: flex-end;
+  border: 3px solid var(--chalk-pink);
+  z-index: 2;
+}
+.overlay-toggle-btn {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: var(--chalk-pink);
+  color: var(--prussian-blue);
+}
+.overlay-toggle-container,
+.overlay-toggle-btn {
+  border-radius: 20px;
+}
+.overlay-toggle-btn:hover {
+  background-color: var(--main-purple);
+  color: var(--chalk-pink);
+  transition: all .3s ease;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
